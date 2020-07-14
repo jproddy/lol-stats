@@ -1,0 +1,81 @@
+Account name: vayneofcastamere
+
+Oldest match on record: 2018-07-12 05:52:58.667000
+
+You have never played the following champions in the given mode:
+['Aatrox', 'Akali', 'Alistar', 'Anivia', 'Annie', 'Aphelios', 'AurelionSol', 'Azir', 'Braum', 'Camille', 'Darius', 'DrMundo', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen', 'Gnar', 'Graves', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Ivern', 'Janna', 'Jayce', 'Kassadin', 'Katarina', 'Kayle', 'Kayn', 'Kennen', 'Kled', 'KogMaw', 'Lissandra', 'Lux', 'Malzahar', 'Maokai', 'MasterYi', 'MonkeyKing', 'Mordekaiser', 'Nami', 'Neeko', 'Nunu', 'Ornn', 'Pantheon', 'Poppy', 'Pyke', 'RekSai', 'Renekton', 'Rengar', 'Riven', 'Rumble', 'Ryze', 'Sett', 'Shaco', 'Shen', 'Shyvana', 'Singed', 'Sion', 'Skarner', 'Sona', 'Swain', 'TahmKench', 'Taliyah', 'Taric', 'Trundle', 'Tryndamere', 'TwistedFate', 'Twitch', 'Udyr', 'Urgot', 'Varus', 'Viktor', 'Vladimir', 'Volibear', 'Warwick', 'Xerath', 'Yasuo', 'Yorick', 'Yuumi', 'Zac', 'Zilean', 'Zoe']
+
+Winrates by player champion:
+                 games  wins  losses  winrate
+player_champion
+Olaf                 1     1       0      1.0
+Evelynn              1     1       0      1.0
+Velkoz               4     4       0      1.0
+Talon                1     1       0      1.0
+Nasus                1     1       0      1.0
+...                ...   ...     ...      ...
+Chogath              3     0       3      0.0
+Jax                  1     0       1      0.0
+Soraka               1     0       1      0.0
+Sivir                1     0       1      0.0
+Sylas                1     0       1      0.0
+
+[65 rows x 4 columns]
+
+Winrates with allied champion:
+             games  wins  losses   winrate
+Taric            5     4       1  0.800000
+Fizz            32    25       7  0.781250
+KogMaw           4     3       1  0.750000
+Sona            21    15       6  0.714286
+Singed          14    10       4  0.714286
+...            ...   ...     ...       ...
+TwistedFate     17     5      12  0.294118
+Khazix          25     7      18  0.280000
+Kalista          8     2       6  0.250000
+Ornn             4     1       3  0.250000
+Alistar         12     3       9  0.250000
+
+[148 rows x 4 columns]
+
+Winrates against enemy champion:
+             games  wins  losses   winrate
+Cassiopeia      11     9       2  0.818182
+AurelionSol     10     8       2  0.800000
+Gragas          40    29      11  0.725000
+Tryndamere      49    35      14  0.714286
+Rammus          24    17       7  0.708333
+...            ...   ...     ...       ...
+Zilean          23     8      15  0.347826
+Malphite        71    24      47  0.338028
+Poppy           20     6      14  0.300000
+Warwick         33     9      24  0.272727
+Trundle         20     5      15  0.250000
+
+[148 rows x 4 columns]
+
+Winrate differential by champion based on team
+a negative value indicates that a given champion performs better when on enemy team
+a positive value indicates that a given champion performs better when on your team
+             games_with  winrate_with  games_against  winrate_against  delta_winrate
+Ornn                4.0      0.250000           34.0         0.382353      -0.367647
+Alistar            12.0      0.250000           28.0         0.392857      -0.357143
+Trundle            19.0      0.421053           20.0         0.250000      -0.328947
+Poppy              15.0      0.466667           20.0         0.300000      -0.233333
+Hecarim            13.0      0.307692           39.0         0.461538      -0.230769
+...                 ...           ...            ...              ...            ...
+Sona               21.0      0.714286           40.0         0.550000       0.264286
+Taric               5.0      0.800000           15.0         0.466667       0.266667
+Singed             14.0      0.714286           28.0         0.571429       0.285714
+Cassiopeia         19.0      0.526316           11.0         0.818182       0.344498
+AurelionSol        12.0      0.583333           10.0         0.800000       0.383333
+
+[148 rows x 5 columns]
+
+Is enemy team yasuo actually better than your team Yasuo?
+games_with         177.000000
+winrate_with         0.480226
+games_against      179.000000
+winrate_against      0.491620
+delta_winrate       -0.028154
+Name: Yasuo, dtype: float64
