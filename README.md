@@ -1,9 +1,9 @@
 # lol-stats
-collect player stats from Riot's API and determine win rates as, with and against each champion
+collect player stats from Riot's League of Legends API and determine win rates as, with and against each champion
 
 ## Intro
 
-lol-stats uses [RiotWatcher](https://github.com/pseudonym117/Riot-Watcher) to interact with [Riot's API](https://developer.riotgames.com/apis) to get a player's matchlist. This list is then used to pull each individual game from the database. Desired stats can then be extracted from each game and collected to determine winrates when playing as, with and against each champion.
+lol-stats uses [RiotWatcher](https://github.com/pseudonym117/Riot-Watcher) to interact with [Riot's League of Legends API](https://developer.riotgames.com/apis) to get a player's matchlist. This list is then used to pull each individual game from the database. Desired stats can then be extracted from each game and collected to determine winrates when playing as, with and against each champion.
 
 To use this tool, an API key from Riot's website is needed.
 
