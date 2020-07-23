@@ -2,6 +2,7 @@ import sys
 import pandas as pd
 import time
 from collections import Counter
+from scipy import stats
 
 from riotwatcher import LolWatcher, ApiError
 
@@ -143,7 +144,7 @@ def extract_details_from_match(match, account_id):
 
 
 def wr_by_player_champ(games):
-	''' returns a dataframe containing games, wins, losses and wr for champions played by account_name '''
+	''' returns a dataframe containing games, wins, losses, winrate and p_value for champions played by account_name '''
 	pc_group = games.groupby('player_champion')
 
 	wr = pd.concat([pc_group.win.count(), pc_group.win.sum().astype(int)], axis=1).fillna(0)
@@ -153,12 +154,15 @@ def wr_by_player_champ(games):
 	wr['losses'] = wr.games - wr.wins
 	wr['winrate'] = wr.wins / wr.games
 
+	p_value = lambda champ: stats.binom_test(champ.wins, champ.games) # p = 0.5
+	wr['p_value'] = wr.apply(p_value, axis=1)
+
 	return wr.sort_values(by='winrate', ascending=False)
 
 
 def wr_by_team_champs(games, team):
 	'''
-	returns a dataframe containing games, wins, losses and wr for champions on the given team
+	returns a dataframe containing games, wins, losses, winrates and p_value for champions on the given team
 	from perspective of account_name
 	team = enemy: stats AGAINST champs on enemy team
 	team = ally: stats WITH champs on team
@@ -183,14 +187,17 @@ def wr_by_team_champs(games, team):
 	wr['winrate'] = wr.wins / wr.games
 	wr = wr[['games', 'wins', 'losses', 'winrate']]
 
+	p_value = lambda champ: stats.binom_test(champ.wins, champ.games) # p = 0.5
+	wr['p_value'] = wr.apply(p_value, axis=1)
+
 	return wr.sort_values(by='winrate', ascending=False)
 
 
 def oldest_recorded_match(matches):
 	''' returns the timestamp of the oldest recorded match '''
-	if type(matches.iloc[-1].timestamp) == int:
+	if type(matches.iloc[-1].timestamp) == int: # if gotten from api
 		return time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(matches.iloc[-1].timestamp))
-	else:
+	else: # if loaded from file
 		return matches.iloc[-1].timestamp
 
 
@@ -214,34 +221,39 @@ def their_yasuo_vs_your_yasuo(ally, enemy):
 	return wr.sort_values(by='delta_winrate')
 
 
-
 def main():
-	# global that could be args
 	region = 'na1'
 
+	# IF DOWNLOADING FROM RIOT
 	if len(sys.argv) > 1:
 		account_name = sys.argv[1]
 	else:
 		account_name = 'vayneofcastamere'
 
-	print('Account name:', account_name)
-
 	watcher = LolWatcher(API_KEY)
 	account = watcher.summoner.by_name(region, account_name)
 	account_id = account['accountId']
-	print('Account id:', account_id)
 
 	print('Collecting matchlist')
 	df_ml = get_matchlist(watcher, account_id, region)
 	df_ml.to_json(account_name + '_matchlist.json')
-	# df_ml = pd.read_json('voc_matchlist.json')
 
 	print('Collecting matches')
 	df = get_all_matches(watcher, df_ml.gameId.values, region)
 	df.to_json(account_name + '_allmatches.json')
-	# df = pd.read_json('voc_allmatches.json')
 
-	print('\n')
+
+	# IF LOADING FROM JSON
+	'''
+	account_name = 'vayneofcastamere'
+	account_id = 'mFz2Q8FGiSdaVlWWMO4QB4VnE6R91oOTIh_Mr72iKsaUeQI'
+	df_ml = pd.read_json('vayneofcastamere_matchlist.json')
+	df = pd.read_json('vayneofcastamere_allmatches.json')
+	'''
+
+	print('Account id:', account_id)
+	print('Account name:', account_name)
+
 	print('Oldest match on record:', oldest_recorded_match(df_ml), '\n')
 
 	games = match_details(df, account_id, queue='sr')
@@ -266,8 +278,17 @@ def main():
 	print('a positive value indicates that a given champion performs better when on your team')
 	print(yas, '\n')
 
-	print('Is enemy team yasuo actually better than your team Yasuo?')
-	print(yas.loc['Yasuo'])
+	print('Is enemy team Yasuo actually better than your team Yasuo?')
+	print(yas.loc['Yasuo'], '\n')
+
+	threshold = 0.05
+	print('Champions winrates with statistically significant p-values: p <', threshold, '\n')
+	print('Player champions:')
+	print(wr_player[wr_player.p_value < threshold].sort_values('p_value'), '\n')
+	print('Allied champions:')
+	print(wr_ally[wr_ally.p_value < threshold].sort_values('p_value'), '\n')
+	print('Enemy champions:')
+	print(wr_enemy[wr_enemy.p_value < threshold].sort_values('p_value'), '\n')
 
 
 if __name__ == '__main__':
