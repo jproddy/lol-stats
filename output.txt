@@ -1,11 +1,9 @@
-Account id: mFz2Q8FGiSdaVlWWMO4QB4VnE6R91oOTIh_Mr72iKsaUeQI
 Account name: vayneofcastamere
-
-
-Oldest match on record: 2018-07-12 05:52:58.667000
+Account id: mFz2Q8FGiSdaVlWWMO4QB4VnE6R91oOTIh_Mr72iKsaUeQI
+Oldest match on record: 2018-08-02 07:23:39.155000
 
 You have never played the following champions in the given mode:
-['Aatrox', 'Akali', 'Alistar', 'Anivia', 'Annie', 'Aphelios', 'AurelionSol', 'Azir', 'Braum', 'Camille', 'Darius', 'DrMundo', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen', 'Gnar', 'Graves', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Ivern', 'Janna', 'Jayce', 'Kassadin', 'Katarina', 'Kayle', 'Kayn', 'Kennen', 'Kled', 'KogMaw', 'Lissandra', 'Lux', 'Malzahar', 'Maokai', 'MasterYi', 'MonkeyKing', 'Mordekaiser', 'Nami', 'Neeko', 'Nunu', 'Ornn', 'Pantheon', 'Poppy', 'Pyke', 'RekSai', 'Renekton', 'Rengar', 'Riven', 'Rumble', 'Ryze', 'Sett', 'Shaco', 'Shen', 'Shyvana', 'Singed', 'Sion', 'Skarner', 'Sona', 'Swain', 'TahmKench', 'Taliyah', 'Taric', 'Trundle', 'Tryndamere', 'TwistedFate', 'Twitch', 'Udyr', 'Urgot', 'Varus', 'Viktor', 'Vladimir', 'Volibear', 'Warwick', 'Xerath', 'Yasuo', 'Yorick', 'Yuumi', 'Zac', 'Zilean', 'Zoe']
+ ['Aatrox', 'Akali', 'Alistar', 'Anivia', 'Annie', 'Aphelios', 'AurelionSol', 'Azir', 'Braum', 'Camille', 'Darius', 'DrMundo', 'Fiddlesticks', 'Fiora', 'Fizz', 'Galio', 'Gangplank', 'Garen', 'Gnar', 'Graves', 'Hecarim', 'Heimerdinger', 'Illaoi', 'Ivern', 'Janna', 'Jayce', 'Kassadin', 'Katarina', 'Kayle', 'Kayn', 'Kennen', 'Kled', 'KogMaw', 'Lissandra', 'Lux', 'Malzahar', 'Maokai', 'MasterYi', 'MonkeyKing', 'Mordekaiser', 'Nami', 'Neeko', 'Nunu', 'Ornn', 'Pantheon', 'Poppy', 'Pyke', 'RekSai', 'Renekton', 'Rengar', 'Riven', 'Rumble', 'Ryze', 'Sett', 'Shaco', 'Shen', 'Shyvana', 'Singed', 'Sion', 'Skarner', 'Sona', 'Swain', 'TahmKench', 'Taliyah', 'Taric', 'Trundle', 'Tryndamere', 'TwistedFate', 'Twitch', 'Udyr', 'Urgot', 'Varus', 'Viktor', 'Vladimir', 'Volibear', 'Warwick', 'Xerath', 'Yasuo', 'Yorick', 'Yuumi', 'Zac', 'Zilean', 'Zoe']
 
 Winrates by player champion:
                  games  wins  losses  winrate  p_value
@@ -27,89 +25,108 @@ Sylas                1     0       1      0.0    1.000
 Winrates with allied champion:
              games  wins  losses   winrate   p_value
 Taric            5     4       1  0.800000  0.375000
-Fizz            32    25       7  0.781250  0.002102
-KogMaw           4     3       1  0.750000  0.625000
+Fizz            31    24       7  0.774194  0.003327
+Nocturne         8     6       2  0.750000  0.289062
 Sona            21    15       6  0.714286  0.078354
-Singed          14    10       4  0.714286  0.179565
+Yorick          20    14       6  0.700000  0.115318
 ...            ...   ...     ...       ...       ...
-TwistedFate     17     5      12  0.294118  0.143463
+Kalista          7     2       5  0.285714  0.453125
 Khazix          25     7      18  0.280000  0.043285
-Kalista          8     2       6  0.250000  0.289062
-Ornn             4     1       3  0.250000  0.625000
 Alistar         12     3       9  0.250000  0.145996
+TwistedFate     16     4      12  0.250000  0.076813
+Ornn             4     1       3  0.250000  0.625000
 
 [148 rows x 5 columns]
 
 Winrates against enemy champion:
              games  wins  losses   winrate   p_value
 Cassiopeia      11     9       2  0.818182  0.065430
-AurelionSol     10     8       2  0.800000  0.109375
+AurelionSol      9     7       2  0.777778  0.179688
+Azir            15    11       4  0.733333  0.118469
 Gragas          40    29      11  0.725000  0.006427
-Tryndamere      49    35      14  0.714286  0.003802
-Rammus          24    17       7  0.708333  0.063915
+Tryndamere      47    34      13  0.723404  0.003088
 ...            ...   ...     ...       ...       ...
-Zilean          23     8      15  0.347826  0.210040
-Malphite        71    24      47  0.338028  0.008555
+Malphite        69    23      46  0.333333  0.007621
+Zilean          22     7      15  0.318182  0.133801
 Poppy           20     6      14  0.300000  0.115318
 Warwick         33     9      24  0.272727  0.013531
 Trundle         20     5      15  0.250000  0.041389
 
 [148 rows x 5 columns]
 
-Winrate differential by champion based on team
+Winrate differential by champion based on team:
 a negative value indicates that a given champion performs better when on enemy team
 a positive value indicates that a given champion performs better when on your team
              games_with  winrate_with  games_against  winrate_against  delta_winrate
 Ornn                4.0      0.250000           34.0         0.382353      -0.367647
-Alistar            12.0      0.250000           28.0         0.392857      -0.357143
+Alistar            12.0      0.250000           27.0         0.407407      -0.342593
 Trundle            19.0      0.421053           20.0         0.250000      -0.328947
-Poppy              15.0      0.466667           20.0         0.300000      -0.233333
-Hecarim            13.0      0.307692           39.0         0.461538      -0.230769
+Galio              19.0      0.315789           21.0         0.428571      -0.255639
+Taliyah            15.0      0.400000           14.0         0.357143      -0.242857
 ...                 ...           ...            ...              ...            ...
-Sona               21.0      0.714286           40.0         0.550000       0.264286
+Singed             13.0      0.692308           28.0         0.571429       0.263736
 Taric               5.0      0.800000           15.0         0.466667       0.266667
-Singed             14.0      0.714286           28.0         0.571429       0.285714
-Cassiopeia         19.0      0.526316           11.0         0.818182       0.344498
-AurelionSol        12.0      0.583333           10.0         0.800000       0.383333
+Kennen             26.0      0.615385           15.0         0.666667       0.282051
+Cassiopeia         17.0      0.529412           11.0         0.818182       0.347594
+AurelionSol        12.0      0.583333            9.0         0.777778       0.361111
 
 [148 rows x 5 columns]
 
 Is enemy team Yasuo actually better than your team Yasuo?
-games_with         177.000000
-winrate_with         0.480226
-games_against      179.000000
-winrate_against      0.491620
-delta_winrate       -0.028154
+games_with         173.000000
+winrate_with         0.479769
+games_against      177.000000
+winrate_against      0.485876
+delta_winrate       -0.034356
 Name: Yasuo, dtype: float64
 
-Champions winrates with statistically significant p-values: p < 0.05
+Champion winrates with statistically significant p-values: p < 0.05
 
 Player champions:
-                 games  wins  losses   winrate   p_value
+                 games  wins  losses  winrate   p_value
 player_champion
-Nocturne           105    68      37  0.647619  0.003221
-JarvanIV           492   277     215  0.563008  0.005902
-Lucian              25     7      18  0.280000  0.043285
+Nocturne           100    64      36   0.6400  0.006637
+JarvanIV           480   270     210   0.5625  0.007020
 
 Allied champions:
-          games  wins  losses   winrate   p_value
-Fizz         32    25       7  0.781250  0.002102
-Quinn        56    38      18  0.678571  0.010455
-Ashe         74    48      26  0.648649  0.014080
-Rumble      250   144     106  0.576000  0.019099
-Ryze         84    53      31  0.630952  0.021383
-Senna       111    67      44  0.603604  0.036306
-Volibear     47    31      16  0.659574  0.039986
-Khazix       25     7      18  0.280000  0.043285
+        games  wins  losses   winrate   p_value
+Fizz       31    24       7  0.774194  0.003327
+Quinn      53    37      16  0.698113  0.005486
+Ashe       71    46      25  0.647887  0.016995
+Ryze       82    52      30  0.634146  0.019827
+Rumble    246   141     105  0.573171  0.025447
+Nasus      31     9      22  0.290323  0.029449
+Senna     111    67      44  0.603604  0.036306
+Khazix     25     7      18  0.280000  0.043285
 
 Enemy champions:
             games  wins  losses   winrate   p_value
-Tryndamere     49    35      14  0.714286  0.003802
+Tryndamere     47    34      13  0.723404  0.003088
 Gragas         40    29      11  0.725000  0.006427
-Malphite       71    24      47  0.338028  0.008555
+Malphite       69    23      46  0.333333  0.007621
 Warwick        33     9      24  0.272727  0.013531
-Jhin           98    61      37  0.622449  0.019690
-Akali          70    45      25  0.642857  0.022463
-Rengar         69    44      25  0.637681  0.029493
-Renekton       59    38      21  0.644068  0.036343
+Akali          66    43      23  0.651515  0.018657
+Renekton       57    37      20  0.649123  0.033144
+Rengar         68    43      25  0.632353  0.038460
+Jhin           95    58      37  0.610526  0.039608
 Trundle        20     5      15  0.250000  0.041389
+Rakan          37    25      12  0.675676  0.047031
+
+Overall winrate: 768 wins / 1481 games (51.857%)
+Blue side winrate: 362 wins / 700 games (51.714%)
+Red side winrate: 406 wins / 781 games (51.985%)
+
+For all games:
+Average game duration: 28:09
+Winning game duration: 28:14
+Losing game duration: 28:03
+
+For games (probably) ended in forfeit:
+Average game duration: 23:25
+Winning game duration: 23:22
+Losing game duration: 23:27
+
+For games (probably) not ended in forfeit:
+Average game duration: 31:18
+Winning game duration: 30:48
+Losing game duration: 31:56
