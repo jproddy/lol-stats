@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+import sys
 
 from riotwatcher import LolWatcher, ApiError
 
@@ -525,8 +526,11 @@ def show_all_features(source='load'):
 
 
 def main():
-	show_all_features(source='load')
-	# show_all_features(source='api')
+	if len(sys.argv) == 1:
+		source = 'load'
+	else:
+		source = sys.argv[1]
+	show_all_features(source=source)
 
 if __name__ == '__main__':
 	main()
